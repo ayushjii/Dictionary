@@ -1,9 +1,25 @@
-import './App.css';
+import { createContext, useState } from "react";
+import Header from "./components/Header";
+import ResultList from "./components/ResultList";
 
-export default function App() {
+// Create context
+export const InputContext = createContext();
+
+function App() {
+  const [inputValue, setInputValue] = useState("");
+
+  const value = {
+    inputValue, setInputValue
+  }
+
   return (
-    <h1 className="text-3xl font-bold underline text-red-500">
-      Hello world!
-    </h1>
-  )
+    <InputContext.Provider value={value}>
+      <div className="App">
+        <Header />
+        <ResultList />
+      </div>
+    </InputContext.Provider>
+  );
 }
+
+export default App;
