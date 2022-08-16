@@ -16,8 +16,6 @@ const Header = () => {
     if(e.key === 'Enter') {
       setInputValue(value);
       setValue("")
-    }else if (e.key === 'Delete' || 'esc' ){
-     setValue("")
     }
   }
 
