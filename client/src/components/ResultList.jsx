@@ -39,7 +39,7 @@ const ResultList = () => {
   }
 
   if(error) {
-    return <h3 className="text-center mt-10 font-semibold text-gray-500">Sorry !! The word doesn't exsist </h3>
+    return <h3 className="text-center mt-10 font-semibold text-red-500">Sorry !! The word doesn't exsist </h3>
   }
 
   return (
